@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe, faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,54 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'minibio';
+
+  title = 'MiniBio';
+  github = faGithub;
+  twitter = faTwitter;
+  web = faGlobe;
+  linkedin = faLinkedin;
+
+  isDarkMode = false;
+  sol = faSun;
+  luna = faMoon;
+  
+  user = {
+    image: '../assets/img/logo0.png',
+    username: 'Juan Molina',
+    description: "Administrador de Sistemas y futuro desarrollador Web.👨‍💻\n Soy apasionado de la informática y del cacharreo.💻🛠️",
+    links: [
+      {
+        link: "https://github.com/PcMant",
+        title: "Mis proyectos en gitHub",
+        icon: this.github
+      },
+      {
+        link: "https://twitter.com/ipcmant",
+        title: "Mi twtter",
+        icon: this.twitter
+      },
+      {
+        link: "https://www.pcmant.com/",
+        title: "Mi Web",
+        icon: this.web
+      },
+      {
+        link: "https://www.linkedin.com/in/juanmol/",
+        title: "Mi perfil de Linkedin",
+        icon: this.linkedin
+      }
+  ]
+};
+
+
+  ngOnInit(){
+    if (window.matchMedia && window.matchMedia('(preferers-color-scheme: dark)')){
+      // dark mode
+      console.log("Dark mode ON");
+    }
+  }
+
+  changeMode(){
+    this.isDarkMode = !this.isDarkMode;
+  }
 }
