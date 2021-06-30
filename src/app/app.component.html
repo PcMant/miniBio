@@ -27,7 +27,6 @@
 </div>
 
 <button class="btn-mode" type="button" (click)="changeMode()">
-  {{isDarkMode}}
-  <fa-icon [icon]="sol"></fa-icon>
-  <fa-icon [icon]="luna"></fa-icon>
+  <fa-icon *ngIf="isDarkMode" [icon]="sol"></fa-icon>
+  <fa-icon *ngIf="!isDarkMode" [icon]="luna"></fa-icon>
 </button>

@@ -60,3 +60,19 @@
         font-size: 20px;
     }
 }
+
+.head.dark {
+    color: white;
+    img {
+        box-shadow: $shadowDark;
+    }
+    .link-item {
+        box-shadow: $shadowDark;
+        fa-icon {
+            color: white;
+        }
+        p {
+            color: white;
+        }
+    }
+}

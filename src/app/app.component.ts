@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe, faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
@@ -47,6 +47,7 @@ export class AppComponent {
   ]
 };
 
+  constructor(private renderer: Renderer2){}
 
   ngOnInit(){
     if (window.matchMedia && window.matchMedia('(preferers-color-scheme: dark)')){
@@ -57,5 +58,12 @@ export class AppComponent {
 
   changeMode(){
     this.isDarkMode = !this.isDarkMode;
+
+    if(this.isDarkMode) {
+      this.renderer.addClass(document.body, 'dark');
+    } else {
+      this.renderer.removeClass(document.body, 'dark');
+    }
   }
+
 }
