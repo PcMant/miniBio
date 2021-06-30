@@ -18,6 +18,14 @@
         font-size: 18px;
         margin-bottom: 40px;
     }
+
+    a:hover{
+        -webkit-transform: skew(20deg);
+        -moz-transform: skew(20deg);
+        -ms-transform: skew(20deg);
+        -o-transform: skew(20deg);
+        transform: skew(20deg);
+    }
 }
 
 .link-item {
@@ -54,8 +62,8 @@
     top: 20px;
     right: 20px;
     border: 0px;
-    border-radius: 45%;
-    padding: 10px 30px;
+    border-radius: 50%;
+    padding: 10px 15px 10px 15px;
     fa-icon {
         font-size: 20px;
     }
@@ -82,6 +90,10 @@
     color: white;
 }
 
-// ::ng-deep body.dark {
-//     background-color: black;
-// }
+::ng-deep body.dark {
+    background-color:rgb(34, 34, 34);
+
+    img {
+        background-color: white;
+    }
+}

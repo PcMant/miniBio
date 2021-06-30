@@ -22,11 +22,11 @@ export class AppComponent {
   user = {
     image: '../assets/img/logo0.png',
     username: 'Juan Molina',
-    description: "Administrador de Sistemas y futuro desarrollador Web.👨‍💻\n Soy apasionado de la informática y del cacharreo.💻🛠️",
+    description: "Técnico Superior en Sistemas Informáticos en red y futuro desarrollador Web.👨‍💻\n Soy apasionado de la informática y del cacharreo.💻🛠️",
     links: [
       {
         link: "https://github.com/PcMant",
-        title: "Mis proyectos en gitHub",
+        title: "Mis proyectos en GitHub",
         icon: this.github
       },
       {

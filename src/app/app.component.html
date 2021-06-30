@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
 
       <div class="col-12 col-lg-5 head" [ngClass]="{'dark': isDarkMode}">
-          <img [src]="user.image" alt="Andrey Marin">
+          <img [src]="user.image" [alt]="user.username">
           <h1>{{user.username}}</h1>
           <p>{{user.description}}</p>
 
@@ -18,7 +18,7 @@
               </div>
           </a>
 
-          <button class="btn-mode" type="button" (click)="changeMode()">
+          <button class="btn-mode" type="button"  (click)="changeMode()">
             <fa-icon *ngIf="isDarkMode" [icon]="luna"></fa-icon>
             <fa-icon *ngIf="!isDarkMode" [icon]="sol"></fa-icon>
           </button>
