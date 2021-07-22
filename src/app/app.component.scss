@@ -19,12 +19,22 @@
         margin-bottom: 40px;
     }
 
+    a{
+        -webkit-transform: skew(-20deg);
+        -moz-transform: skew(-20deg);
+        -ms-transform: skew(-20deg);
+        -o-transform: skew(-20deg);
+        transform: skew(-20deg);
+        margin-top: -10px;
+    }
+
     a:hover{
-        -webkit-transform: skew(20deg);
-        -moz-transform: skew(20deg);
-        -ms-transform: skew(20deg);
-        -o-transform: skew(20deg);
-        transform: skew(20deg);
+        -webkit-transform: skew(0deg);
+        -moz-transform: skew(0deg);
+        -ms-transform: skew(0deg);
+        -o-transform: skew(0deg);
+        transform: skew(0deg);
+        margin-top: 10px;
     }
 }
 
@@ -90,10 +100,17 @@
     color: white;
 }
 
+//Con esto se puede acceder al body
 ::ng-deep body.dark {
     background-color:rgb(34, 34, 34);
 
     img {
         background-color: white;
+    }
+
+    button{
+        background-color: red;
+        border-radius: 50%;
+        padding: 10px 15px 10px 15px;
     }
 }
