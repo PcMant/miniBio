@@ -22,7 +22,7 @@ export class AppComponent {
   user = {
     image: '../assets/img/logo0.png',
     username: 'Juan Molina',
-    description: "Técnico Superior en Sistemas Informáticos en red y futuro desarrollador Web.👨‍💻\n Soy apasionado de la informática y del cacharreo.💻🛠️",
+    description: "SysAdmin y Desarrollador Web.👨‍💻\n Soy apasionado de la informática y del cacharreo.💻🛠️",
     links: [
       {
         link: "https://github.com/PcMant",
