@@ -4,7 +4,7 @@
       <div class="col-12 col-lg-5 head" [ngClass]="{'dark': isDarkMode}">
           <img [src]="user.image" [alt]="user.username">
           <h1>{{user.username}}</h1>
-          <p>{{user.description}}</p>
+          <p [innerHtml]="user.description"></p>
 
           <a *ngFor="let item of user.links"
             href="{{item.link}}"
